@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="description" content="愛知・田原。独学の男が執念で仕込む、ローカルクラフトビール。" />
+    <title>THE LOCAL FERMENT — 田原のクラフトビール</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260829-final-cleanup" />
+    <script defer src="script.js?v=20260829-specific"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="THE LOCAL FERMENT トップへ">
+        <span class="brand-mark">LF</span>
+        <span class="brand-text">THE LOCAL<br /><strong>FERMENT</strong></span>
+      </a>
+      <div class="header-meta">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>TAHARA / AICHI</span>
+      </div>
+    </header>
+
+    <aside class="slide-nav" aria-label="スライドナビゲーション">
+      <span class="slide-count" aria-live="polite"><b id="current-slide">01</b><i>/</i>05</span>
+      <div class="slide-dots">
+        <button class="dot is-active" type="button" data-slide="0" aria-label="1枚目へ" aria-current="true"></button>
+        <button class="dot" type="button" data-slide="1" aria-label="2枚目へ"></button>
+        <button class="dot" type="button" data-slide="2" aria-label="3枚目へ"></button>
+        <button class="dot" type="button" data-slide="3" aria-label="4枚目へ"></button>
+        <button class="dot" type="button" data-slide="4" aria-label="5枚目へ"></button>
+      </div>
+    </aside>
+
+    <main id="main" class="slides" tabindex="0">
+      <section class="slide slide-hero is-active" id="top" data-index="0" aria-label="ファーストビュー">
+        <div class="hero-image" role="img" aria-label="暗がりで黄金色のビールを注ぐイメージ">
+          <video class="hero-video" autoplay loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=2000&q=85" aria-hidden="true">
+            <source src="assets/hero-pour.webm" type="video/webm" />
+            <source src="assets/hero-pour.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span>01</span> A BEER BORN FROM OBSESSION</p>
+          <h1>3年の孤独と<br />挫折の果てに、<br /><em>この一杯だけは</em><br />妥協しなかった。</h1>
+          <p class="hero-lead">愛知・田原の片隅で。<br />独学の男が執念で仕込む、<br />本能を揺さぶるクラフトビール。</p>
+        </div>
+        <div class="hero-stamp" aria-hidden="true">
+          <span>SMALL BATCH</span>
+          <strong>EST.<br />2020</strong>
+        </div>
+        <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="true" aria-label="音声をオフにする">
+          <span class="sound-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M4 9v6h4l5 4V5L8 9H4Z"></path>
+              <path class="sound-wave" d="M16 8.5a5 5 0 0 1 0 7M18.8 5.7a9 9 0 0 1 0 12.6"></path>
+            </svg>
+          </span>
+          <span class="sound-label">SOUND ON</span>
+        </button>
+        <div class="scroll-cue" aria-hidden="true"><span>SCROLL TO DISCOVER</span><i></i></div>
+      </section>
+
+      <section class="slide story-slide slide-2" data-index="1" aria-label="ストーリー">
+        <div class="bg-solid" aria-hidden="true"></div>
+        <div class="photo-container">
+          <img src="assets/story-workshop.png" alt="HL BREWINGで作業する職人と手元のノート" class="story-photo" />
+          <div class="photo-fade-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="content-container">
+          <span class="slide-number">02 // STORY</span>
+          <p class="story-process">仕込みの合間、ノートに工程を書き込む。</p>
+          <h2 class="slide-title">教科書なし。<br />あるのは、この街を面白くする狂気だけ。</h2>
+          <div class="quote-box">
+            <p class="main-quote">「正直、何度も破産しかけたし、心が折れかけた。でも、自分が死ぬほど美味いと思えるビールを地元で造りたくて、ここまで這い上がってきた」</p>
+            <p class="sub-quote">失敗しても、また翌日には修正する。ただそれの繰り返し。日々勉強ですね。<span class="author">—— 製造者</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide local-slide slide-3" data-index="2" aria-label="ローカルの結晶">
+        <div class="bg-lighthouse" aria-hidden="true"></div>
+        <div class="dark-overlay" aria-hidden="true"></div>
+        <div class="content-container">
+          <span class="slide-number">03 // THE LOCAL</span>
+          <p class="eyebrow">A TASTE OF THE LAND</p>
+          <h2 class="slide-title">渥美半島の恵みを、<br />グラス一杯に注ぐ。</h2>
+          <div class="text-with-card">
+            <div class="text-block">
+              <span class="step-num">03</span>
+              <p class="main-text">3年の孤独と挫折を越え、独学でこの街にブルワリーを形にした、その執念の軌跡だ。<br /><br />この土地の風土と、造り手の想いはそのまま液体に変わる。他所では絶対に味わえないローカルの結晶。</p>
+            </div>
+            <figure class="polaroid-card">
+              <img src="assets/89787_0.jpg" alt="菜の花畑での仕込み風景" loading="lazy" decoding="async" />
+              <figcaption class="card-caption">TAHARA / AICHI</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-4 lineup-slide" id="lineup" data-index="3" aria-label="二つのクラフトビール">
+        <div class="bg-solid" aria-hidden="true"></div>
+        <div class="content-container">
+          <span class="slide-number">04 // LINEUP</span>
+          <h2 class="slide-title">妥協なき、2つの狂気。</h2>
+
+          <div class="products-grid">
+            <article class="product-card product-card-stout" data-num="01" aria-labelledby="product-stout-name">
+              <figure class="product-image-wrap">
+                <img src="assets/marshmallow-stout-glass.png?v=20260829-cropped" alt="Marshmallow Stout" class="glass-img" loading="lazy" decoding="async" />
+              </figure>
+              <div class="product-info">
+                <p class="product-badge">STOUT / ALC. 4.5%</p>
+                <h3 class="product-name" id="product-stout-name">Marshmallow Stout</h3>
+                <p class="product-desc">
+                  スッキリ、飲みやすいスタウト。マシュマロの香りはふわっと余韻に、甘味はほとんどなく、アルコールに変わるからこそのドライな後味。
+                </p>
+                <ul class="product-features">
+                  <li>✨ マシュマロの香りは、ふわっと余韻に</li>
+                  <li>🌾 ローストモルトの深いコク</li>
+                  <li>💧 軽やかな口当たりとドライな後味</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="product-card product-card-beach" data-num="02" aria-labelledby="product-beach-name">
+              <figure class="product-image-wrap">
+                <img src="assets/beach-salt-glass.png?v=20260829-cropped" alt="BEACH SALT" class="glass-img" loading="lazy" decoding="async" />
+              </figure>
+              <div class="product-info">
+                <p class="product-badge">GOSE / ALC. 8.0%</p>
+                <h3 class="product-name" id="product-beach-name">BEACH SALT</h3>
+                <p class="product-desc">
+                  メロンとスイカのジューシーな甘い香りに、ココナッツの優しい南国感。ほんのり塩味が全体を引き締める、海風のような一杯。
+                </p>
+                <ul class="product-features">
+                  <li>🍉 メロン・スイカ・ココナッツの融合</li>
+                  <li>🌊 塩味が全体を引き締めるソルティな後味</li>
+                  <li>🌴 8.0%を感じさせないスッキリした飲み口</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-final" data-index="4" aria-labelledby="story-title">
+        <div class="final-inner">
+          <header class="final-heading">
+            <p class="slide-number">05 // OUR STORY</p>
+            <h2 id="story-title">一杯の向こう側にある、<br />温度。</h2>
+          </header>
+
+          <div class="story-layout">
+            <article class="story-card">
+              <figure class="story-main-visual">
+                <img
+                  src="assets/story-maker.jpg?v=20260829-02"
+                  alt="菜の花畑でクラフトビールを手に笑う作り手"
+                  class="story-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="story-card-copy">
+                <p class="story-tag">01 / BREWER</p>
+                <h3>田原の自然と、妥協なき手仕事</h3>
+                <p>
+                  土地の風景を見つめ、手を動かし、何度も味を確かめる。
+                  田原の空気と作り手の熱を、一杯のビールに閉じ込めています。
+                </p>
+              </div>
+            </article>
+
+            <div class="story-side">
+              <div class="story-sub-grid">
+                <figure class="story-sub-card">
+                  <img
+                    src="assets/story-labeling.jpg?v=20260829-02"
+                    alt="クラフトビールのボトルにラベルを貼る風景"
+                    class="sub-img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="story-sub-copy">
+                    <span class="story-tag">02 / LABELLING</span>
+                    <p>一本ずつ手作業で仕上げる、ラベル貼りの工程。</p>
+                  </figcaption>
+                </figure>
+                <figure class="story-sub-card">
+                  <img
+                    src="assets/story-shop.jpg?v=20260829-02"
+                    alt="夜のブルワリー店舗"
+                    class="sub-img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="story-sub-copy">
+                    <span class="story-tag">03 / PLACE</span>
+                    <p>田原の夜にひらく、ブルワリーの小さな拠点。</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <a class="story-cta" href="#lineup">
+                <span class="story-cta-label">TASTE THE STORY</span>
+                <span class="story-cta-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
