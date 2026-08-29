@@ -106,18 +106,19 @@ const setActiveSlide = (index) => {
 };
 
 const canScrollWithinSlide = (slide, direction) => {
-  if (!slide || slide.scrollHeight <= slide.clientHeight + 1) return false;
-  const atStart = slide.scrollTop <= 1;
-  const atEnd = slide.scrollTop + slide.clientHeight >= slide.scrollHeight - 1;
-  return direction > 0 ? !atEnd : !atStart;
+  // Every page is intentionally fixed to one viewport. There is no nested
+  // vertical scroll to consume the wheel or swipe gesture.
+  return false;
 };
 
 const goToSlide = (index) => {
   const nextIndex = Math.max(0, Math.min(index, slides.length - 1));
-  const target = slides[nextIndex];
   if (activeIndex === 0 && soundEnabled) startHeroVideo(true);
   setActiveSlide(nextIndex);
-  target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  deck?.scrollTo({
+    left: nextIndex * deck.clientWidth,
+    behavior: "smooth",
+  });
 };
 
 dots.forEach((dot) => {
@@ -147,9 +148,9 @@ setActiveSlide(0);
 deck.addEventListener(
   "wheel",
   (event) => {
-    if (Math.abs(event.deltaY) < 8) return;
-    const direction = event.deltaY > 0 ? 1 : -1;
-    if (canScrollWithinSlide(slides[activeIndex], direction)) return;
+    const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+    if (Math.abs(delta) < 8) return;
+    const direction = delta > 0 ? 1 : -1;
     event.preventDefault();
     if (wheelLocked) return;
     wheelLocked = true;
@@ -181,10 +182,12 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+let touchStartX = 0;
 let touchStartY = 0;
 deck.addEventListener(
   "touchstart",
   (event) => {
+    touchStartX = event.changedTouches[0].screenX;
     touchStartY = event.changedTouches[0].screenY;
   },
   { passive: true },
@@ -193,10 +196,10 @@ deck.addEventListener(
 deck.addEventListener(
   "touchend",
   (event) => {
-    const distance = touchStartY - event.changedTouches[0].screenY;
-    if (Math.abs(distance) < 55) return;
-    const direction = distance > 0 ? 1 : -1;
-    if (canScrollWithinSlide(slides[activeIndex], direction)) return;
+    const distanceX = touchStartX - event.changedTouches[0].screenX;
+    const distanceY = touchStartY - event.changedTouches[0].screenY;
+    if (Math.abs(distanceX) < 55 || Math.abs(distanceX) < Math.abs(distanceY)) return;
+    const direction = distanceX > 0 ? 1 : -1;
     goToSlide(activeIndex + direction);
   },
   { passive: true },
